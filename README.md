@@ -1,8 +1,15 @@
 # Giffos
 
+
+![Giffos Screenshot](src-tauri/icons/Square150x150Logo.png)
+
 A lightweight, always-on-top GIF search and clipboard utility built with Tauri and React. Quickly search for GIFs using the GIPHY API and copy them to your clipboard with a single click.
 
 ![Giffos Screenshot](public/giphy.png)
+
+## Preview
+
+![Giffos Preview](giffos.gif)
 
 ## Features
 
