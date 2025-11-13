@@ -6,6 +6,7 @@ on:
       - release
       
 env:
+  TAURI_SIGNING_PRIVATE_KEY: ${{ vars.TAURI_SIGNING_PRIVATE_KEY }}
   TAURI_KEY_PASSWORD: ${{ vars.TAURI_KEY_PASSWORD }}
 
 jobs:
