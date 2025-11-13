@@ -93,7 +93,7 @@ function App() {
       <div className="flex justify-end py-1 px-2 items-center">
         <div className="flex gap-1 w-full items-center">
           <div className="draggable text-gray-500 text-nowrap">
-            Giffos v0.1.2
+            Giffos v0.1.3
           </div>
           <div className="flex flex-row gap-1">
             <label className="text-gray-200" htmlFor="hdEnabled">
