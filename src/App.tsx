@@ -1,9 +1,9 @@
-import { useCallback, useEffect, useRef, useState } from "react";
-import "./App.css";
 import { invoke } from "@tauri-apps/api/core";
 import { appCacheDir } from "@tauri-apps/api/path";
 import { writeFile } from "@tauri-apps/plugin-fs";
 import { load } from "@tauri-apps/plugin-store";
+import { useCallback, useEffect, useRef, useState } from "react";
+import "./App.css";
 
 function App() {
   const searchRef = useRef<HTMLInputElement>(null);
@@ -219,7 +219,14 @@ function App() {
                     : "Copy GIF"}
               </button>
               <div className="flex w-full justify-end content-end items-end text-gray-500/50 py-2">
-                Made with ❤️ by DavidArtifacts
+                Made with ❤️ by{" "}
+                <a
+                  href="https://github.com/artifacts-dav"
+                  target="_blank"
+                  className="hover:text-blue-500"
+                >
+                  David Rdz-Reveles
+                </a>
               </div>
             </div>
           </div>
