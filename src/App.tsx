@@ -11,23 +11,25 @@ function App() {
   const [index, setIndex] = useState(-1);
   const [searchQuery, setSearchQuery] = useState("");
   const [gifs, setGifs] = useState<string[]>([]);
+  const [offset, setOffset] = useState(0);
   const [copied, setCopied] = useState(false);
   const [isHD, setIsHD] = useState(false);
   const [isConfig, setIsConfig] = useState(false);
   const [apiKey, setApiKey] = useState("");
 
-  const searchHandler = () => {
+  const searchHandler = (offsetParam: number = 0, append: boolean = false) => {
     fetch(
-      `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${encodeURIComponent(searchQuery)}&limit=10&bundle=low_bandwidth`,
+      `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${encodeURIComponent(searchQuery)}&limit=10&offset=${offsetParam}&bundle=low_bandwidth`,
     )
       .then((response) => response.json())
       .then((data) =>
-        setGifs(
-          data.data.map(
+        setGifs((prev) => {
+          const newGifs = data.data.map(
             (gif: any) =>
               gif.images[isHD ? "downsized" : "fixed_width_small"].url,
-          ),
-        ),
+          );
+          return append ? [...prev, ...newGifs] : newGifs;
+        }),
       );
   };
 
@@ -81,7 +83,8 @@ function App() {
 
   const debouncedSearch = useCallback(() => {
     const handle = setTimeout(() => {
-      searchHandler();
+      setOffset(0);
+      searchHandler(0, false);
     }, 500);
     return handle;
   }, [searchQuery]);
@@ -200,6 +203,18 @@ function App() {
                   onClick={() => setIndex(i)}
                 />
               ))}
+              {gifs.length > 0 && (
+                <button
+                  className="w-22 h-12 px-2 rounded bg-gray-800 text-gray-500 hover:bg-gray-700 hover:text-gray-300 flex-shrink-0 text-xs"
+                  onClick={() => {
+                    const newOffset = offset + 10;
+                    setOffset(newOffset);
+                    searchHandler(newOffset, true);
+                  }}
+                >
+                  Load More
+                </button>
+              )}
               {gifs.length == 0 && (
                 <div className="w-full h-16 justify-center content-center text-center text-gray-500">
                   No GIFs found
