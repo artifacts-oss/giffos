@@ -21,7 +21,7 @@ A lightweight, always-on-top GIF search and clipboard utility built with Tauri a
 - 🔒 Secure - your GIPHY API key is stored locally
 
 ## Installation
-- Download the latest release from [GitHub](https://github.com/digitalartifactory/giffos/releases)
+- Download the latest release from [GitHub](https://github.com/artifacts-oss/giffos/releases)
 
 ### Prerequisites
 
@@ -33,7 +33,7 @@ A lightweight, always-on-top GIF search and clipboard utility built with Tauri a
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/digitalartifactory/giffos.git
+   git clone https://github.com/artifacts-oss/giffos.git
    cd giffos
    ```
 
