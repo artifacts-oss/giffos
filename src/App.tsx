@@ -234,13 +234,13 @@ function App() {
                     : "Copy GIF"}
               </button>
               <div className="flex w-full justify-end content-end items-end text-gray-500/50 py-2">
-                Made with ❤️ by 
+                Made with ❤️ by
                 <a
                   href="https://github.com/artifacts-dav"
                   target="_blank"
-                  className="hover:text-blue-500 ms-1"
+                  className="hover:text-blue-500 m-0 p-0 ml-1 underline"
                 >
-                  David Rdz-Reveles
+                  artifacts-dav
                 </a>
               </div>
             </div>
