@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Skills
+skills.md
+.agent/*
+.agents/*
+skills-*.md
+skills-*.json
+skills-*.txt

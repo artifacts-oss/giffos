@@ -14,9 +14,9 @@
       {
         "title": "Giffos - The awsm gifs widget",
         "width": 300,
-        "height": 390,
+        "height": 418,
         "maxWidth": 300,
-        "maxHeight": 390,
+        "maxHeight": 418,
         "transparent": true,
         "decorations": false,
         "alwaysOnTop": true,
