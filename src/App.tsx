@@ -129,7 +129,7 @@ function App() {
       <div className="flex justify-between py-2 px-3 items-center border-b border-[var(--border-dim)] bg-[rgba(0,0,0,0.5)] z-10 relative">
         <div className="flex gap-4 w-full items-center">
           <div className="draggable font-mono text-[11px] text-[var(--accent)] font-bold tracking-widest uppercase">
-            Giffos v0.1.7
+            Giffos v0.1.8
           </div>
           <label className="checkbox-wrapper">
             <input
